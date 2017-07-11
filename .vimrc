@@ -10,7 +10,6 @@
 
 let $vimhome=fnamemodify(resolve(expand("~/.vimrc")), ':p:h')
 let $vundle=$vimhome."/bundle/Vundle.vim"
-set expandtab
 " Be iMproved
 set nocompatible
 
@@ -47,7 +46,6 @@ call vundle#begin()
     Plugin 'tpope/vim-commentary'               " Comment stuff out
     Plugin 'mitsuhiko/vim-sparkup'              " Sparkup(XML/jinja/htlm-django/etc.) support
     Plugin 'Rykka/riv.vim'                      " ReStructuredText plugin
-   "Plugin 'Valloric/YouCompleteMe'             " Autocomplete plugin
 
     "-------------------=== Python  ===-----------------------------
     Plugin 'klen/python-mode'                   " Python mode (docs, refactor, lints...)
@@ -64,7 +62,7 @@ filetype plugin indent on
 "" General settings
 "=====================================================
 syntax enable                               " syntax highlight
-
+set expandtab
 set t_Co=256                                " set 256 colors
 colorscheme wombat256mod                    " set color scheme
 
@@ -248,14 +246,3 @@ let g:syntastic_style_error_symbol='X'
 let g:syntastic_warning_symbol='x'
 let g:syntastic_style_warning_symbol='x'
 let g:syntastic_python_checkers=['flake8', 'pydocstyle', 'python']
-
-" YouCompleteMe
-set completeopt-=preview
-
-let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf=0
-
-"nmap <leader>g :YcmCompleter GoTo<CR>
-"nmap <leader>d :YcmCompleter GoToDefinition<CR>
-
-
