@@ -31,6 +31,8 @@ $ git remote add origin https://github.com/windowsisnotos/test.git
 
 Для загрузки файлов в репозиторий:
 
+$ git pull origin master
+
 $ git push -u origin master
 
 Для удаления файлов в репозитории на GitHub нужно удалить сами файлы, а затем выполнить команду:
